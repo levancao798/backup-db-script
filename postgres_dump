@@ -1,0 +1,10 @@
+#backup to remote server
+pg_dump -U postgres databasename | ssh myuser@mysite.com 'cat > /var/www/db_backup_file'
+#backup to local
+pg_dump [ dbname ] > /path/to/backup/backupfile
+pg_dump [ -h host ] [ -p port ]
+    [ -t table ]
+    [ -f outputfile ]
+    [ -a ] [ -d ] [ -D ] [ -o ] [ -s ] [ -u ] [ -v ] [ -z ]
+    [ dbname ]
+eg: pg_dump -t tablename databasename > /var/www/db_backup_file

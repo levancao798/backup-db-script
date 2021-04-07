@@ -1,0 +1,17 @@
+#backup to remote server
+### from remote server
+mysql_dump --host servername dbname > dbname.sql
+### from local server 
+mysql_dump databasename | ssh myuser@mysite.com 'cat > /var/www/db_backup_file.sql'
+
+#backup local
+mysql_dump databasename > dbname_backup.sql
+
+
+mysqldump --defaults-file=/etc/mysql/debian.cnf pinggo | gzip > /root/tuyendd/pinggo-production-`date +'%m-%d-%Y'`.sql.gz
+
+#show database size
+SELECT table_schema "pinggo",
+        ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" 
+FROM information_schema.tables 
+GROUP BY table_schema; 
