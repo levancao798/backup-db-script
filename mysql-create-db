@@ -1,5 +1,0 @@
-mysql --defaults-file=/etc/mysql/debian.cnf
-CREATE DATABASE pinggo_api_tracking DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-GRANT ALL ON pinggo_api_tracking.* TO 'api_tracking_user'@'localhost' IDENTIFIED BY 'ijJXuofhPiu5';
-GRANT ALL ON pinggo_api_tracking.* TO 'api_tracking_user'@'%' IDENTIFIED BY 'ijJXuofhPiu5';
-FLUSH PRIVILEGES;
