@@ -1,5 +1,5 @@
 #!/bin/bash
-# Maintainer: nhanct@eway.vn
+# Maintainer: 
 # Backup all database, each db to one file
 DATE=`date +%m%d`
 YESTERDAY=`date -d "yesterday" +%m%d`
