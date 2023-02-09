@@ -1,6 +1,6 @@
-mysqldump --defaults-file=/etc/mysql/debian.cnf pinggo -t wards > wards_20210308.sql
-mysqldump --defaults-file=/etc/mysql/debian.cnf pinggo | gzip > /root/tuyendd/pinggo-dev-03032021.sql.gz
-gunzip < pinggo-production-03-03-2021.sql.gz | mysql --defaults-file=/etc/mysql/debian.cnf pinggo
+mysqldump --defaults-file=/etc/mysql/debian.cnf database_name -t wards > wards_20210308.sql
+mysqldump --defaults-file=/etc/mysql/debian.cnf database_name | gzip > /root/mariadb_home_folder/database_name-dev-03032021.sql.gz
+gunzip < database_name-production-03-03-2021.sql.gz | mysql --defaults-file=/etc/mysql/debian.cnf database_name
 #import 
-mysql --defaults-file=/etc/mysql/debian.cnf pinggo < database.sql 
+mysql --defaults-file=/etc/mysql/debian.cnf database_name < database.sql 
 mysql --defaults-file=/etc/mysql/debian.cnf
