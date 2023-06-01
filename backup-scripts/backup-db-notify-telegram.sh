@@ -12,12 +12,12 @@ TODAY=`date +'%m-%d-%Y'`
 ################################################################
 ################## Update below values  ########################
  
-DB_BACKUP_PATH='/root/tuyendd/db_backup'
+DB_BACKUP_PATH='/root/db_backup'
 DATABASE_NAME=`mysql --defaults-file=/etc/mysql/debian.cnf -e "show databases" | grep -v 'information_schema\|performance_schema\|Database\|mysql\|sys'`
 CMD="mysqldump --defaults-file=/etc/mysql/debian.cnf --routines --ignore-table=mysql.event"
 BACKUP_RETAIN_DAYS=14   ## Number of days to keep local backup copy
 LOGFILE='/root/mysql-backup-output.log'
-#CREDENTIALS_FILE='/home/tuyendd/scripts/extra.my.cnf'
+#CREDENTIALS_FILE='/home/scripts/extra.my.cnf'
 USERID="-331965421"
 TOKEN="1157459635:AAHoKBShKDnF1UQop23JK4oKapglsjt1mYY"
 TIMEOUT="10"
